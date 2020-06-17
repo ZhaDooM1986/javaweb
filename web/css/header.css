@@ -1,0 +1,188 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20-06-2019, 1:23:26
+    Author     : samuel
+*/
+
+.header-fixed {
+        background-color: black;
+        background: linear-gradient(to bottom,#1C1C33 0%,#2B0725 100%);
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: white;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*	The header placeholder. It is displayed when the header is fixed to the top of the
+	browser window, in order to prevent the content of the page from jumping up. */
+
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float:left;
+	font: normal 25px compassebold,impact,sans-serif;
+	line-height: normal;
+	margin: 0;
+        //font-size: 1.5em;
+        //line-height: 1.25;   
+}
+
+.header-fixed .header-limiter h1 span {
+	color: white;
+}
+
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: white;
+	text-decoration: none;
+        
+        
+}
+
+.header-fixed .header-limiter nav {
+	font:15px compassebold,impact,sans-serif;;
+	line-height: normal;
+	float: right;
+           
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+        padding: 0 6px;
+        text-decoration:none;
+        color: #ffffff;
+        opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+	.header-fixed {
+		padding: 20px 0;
+		height: 75px;
+	}
+
+	.header-fixed .header-limiter h1 {
+		float: none;
+		margin: -8px 0 10px;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1;
+	}
+
+	.header-fixed .header-limiter nav {
+		line-height: 1;
+		float:none;
+	}
+
+	.header-fixed .header-limiter nav a {
+		font-size: 13px;
+	}
+
+	body.fixed .header-fixed {
+		display: none;
+	}
+
+}
+
+/*
+	 We are clearing the body's margin and padding, so that the header fits properly.
+	 We are also adding a height to demonstrate the scrolling behavior. You can remove
+	 these styles.
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 900px;
+        */background-color: red;
+        background: linear-gradient(to bottom, #150827, #B01C3D);
+        background-repeat: no-repeat;
+}
+
+.formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  
+    
+}
+.form {
+  width: 450px;
+}
+.footer{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(0deg,#150827,#B01C3D);
+    padding: 16px 32px;
+    transition: all .25s ease;
+    box-shadow: -10px 0 10px rgba(1,1,1,.4);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    
+}
